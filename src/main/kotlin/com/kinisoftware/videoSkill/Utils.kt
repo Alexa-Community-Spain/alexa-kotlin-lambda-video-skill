@@ -18,3 +18,5 @@ fun HandlerInput.getLanguage() =
     }
 
 fun RequestEnvelope.getUserId() = context.system.user.userId.substringAfterLast('.')
+
+fun HandlerInput.supportVideoApp() = requestEnvelope.context.system.device.supportedInterfaces.videoApp != null
