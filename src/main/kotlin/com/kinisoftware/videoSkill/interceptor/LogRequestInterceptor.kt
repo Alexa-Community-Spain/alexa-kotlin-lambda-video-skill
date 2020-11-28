@@ -8,6 +8,5 @@ import com.kinisoftware.videoSkill.getUserId
 class LogRequestInterceptor : RequestInterceptor {
     override fun process(input: HandlerInput) {
         println("Request: ${JacksonSerializer().serialize(input.request)} for ${input.requestEnvelope.getUserId()}")
-        println("Context: ${JacksonSerializer().serialize(input.requestEnvelope)} for ${input.requestEnvelope.getUserId()}")
     }
 }
